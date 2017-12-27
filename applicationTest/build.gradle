@@ -12,6 +12,11 @@ buildscript {
     }
 }
 
+defaultConfig {
+    def env = System.getenv()
+    versionName "1." + env['BUILD_NUMBER']
+    }
+
 allprojects {
     repositories {
         jcenter()
